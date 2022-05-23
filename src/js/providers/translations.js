@@ -1,6 +1,6 @@
 (function (angular) {
     'use strict';
-    angular.module('FileManagerApp').config(['$translateProvider', function ($translateProvider) {
+    angular.module('FileManagerApp', []).config(['$translateProvider', function ($translateProvider) {
         $translateProvider.useSanitizeValueStrategy(null);
 
         $translateProvider.translations('en', {
@@ -21,7 +21,7 @@
             turkish: 'Turkish',
             persian: 'Persian',
             polish: 'Polish',
-            dutch:  'Dutch',
+            dutch: 'Dutch',
             confirm: 'Confirm',
             cancel: 'Cancel',
             close: 'Close',

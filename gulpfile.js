@@ -14,7 +14,8 @@ var path = require('path');
 var src = 'src/';
 var dst = 'dist/';
 var tplPath = 'src/templates'; //must be same as fileManagerConfig.tplPath
-var jsFile = 'angular-filemanager.min.js';
+var jsMinFile = 'angular-filemanager.min.js';
+var jsFile = 'angular-filemanager.js';
 var cssFile = 'angular-filemanager.min.css';
 
 gulp.task('clean', function (cb) {
@@ -25,27 +26,34 @@ gulp.task('cache-templates', function () {
   return gulp.src(tplPath + '/*.html')
     .pipe(templateCache(jsFile, {
       module: 'FileManagerApp',
-      base: function(file) {
+      base: function (file) {
         return tplPath + '/' + path.basename(file.history[0]);
       }
     }))
     .pipe(gulp.dest(dst));
 });
 
-gulp.task('concat-uglify-js', ['cache-templates'], function() {
+gulp.task('concat-js', function () {
   return gulp.src([
-    src + 'js/app.js',
+      src + 'js/app.js',
       src + 'js/*/*.js',
-      dst + '/' + jsFile
+      dst + jsFile
     ])
     .pipe(concat(jsFile))
+    .pipe(gulp.dest(dst))
+
+    .pipe(concat(jsMinFile))
     .pipe(uglify())
     .pipe(gulp.dest(dst));
 });
 
-gulp.task('minify-css', function() {
+gulp.task('merge-js', gulp.series('cache-templates', 'concat-js'));
+
+gulp.task('minify-css', function () {
   return gulp.src(src + 'css/*.css')
-    .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(minifyCss({
+      compatibility: 'ie8'
+    }))
     .pipe(concat(cssFile))
     .pipe(gulp.dest(dst));
 });
@@ -54,16 +62,16 @@ gulp.task('lint', function () {
   return gulp.src([src + 'js/app.js', src + 'js/*/*.js'])
     .pipe(eslint({
       'rules': {
-          'quotes': [2, 'single'], 
-          //'linebreak-style': [2, 'unix'],
-          'semi': [2, 'always']
+        'quotes': [2, 'single'],
+        //'linebreak-style': [2, 'unix'],
+        'semi': [2, 'always']
       },
       'env': {
-          'browser': true
+        'browser': true
       },
       'globals': {
-          'angular': true,
-          'jQuery': true
+        'angular': true,
+        'jQuery': true
       },
       'extends': 'eslint:recommended'
     }))
@@ -71,5 +79,5 @@ gulp.task('lint', function () {
     .pipe(eslint.failOnError());
 });
 
-gulp.task('default', ['concat-uglify-js', 'minify-css']);
-gulp.task('build', ['clean', 'default']);
+gulp.task('default', gulp.series('merge-js', 'minify-css'));
+gulp.task('build', gulp.series('clean', 'lint', 'default'));
