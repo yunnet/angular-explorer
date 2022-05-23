@@ -16,7 +16,8 @@ var dst = 'dist/';
 var tplPath = 'src/templates'; //must be same as fileManagerConfig.tplPath
 var jsMinFile = 'angular-filemanager.min.js';
 var jsFile = 'angular-filemanager.js';
-var cssFile = 'angular-filemanager.min.css';
+var cssMinFile = 'angular-filemanager.min.css';
+var cssFile = 'angular-filemanager.css';
 
 gulp.task('clean', function (cb) {
   del(dst + '/*', cb);
@@ -51,10 +52,13 @@ gulp.task('merge-js', gulp.series('cache-templates', 'concat-js'));
 
 gulp.task('minify-css', function () {
   return gulp.src(src + 'css/*.css')
+    .pipe(concat(cssFile))
+    .pipe(gulp.dest(dst))
+
     .pipe(minifyCss({
       compatibility: 'ie8'
     }))
-    .pipe(concat(cssFile))
+    .pipe(concat(cssMinFile))
     .pipe(gulp.dest(dst));
 });
 
