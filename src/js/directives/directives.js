@@ -1,6 +1,6 @@
 (function (angular) {
     'use strict';
-    var app = angular.module('FileManagerApp', []);
+    var app = angular.module('FileManagerApp');
 
     app.directive('angularFilemanager', ['$parse', 'fileManagerConfig', function ($parse, fileManagerConfig) {
         return {

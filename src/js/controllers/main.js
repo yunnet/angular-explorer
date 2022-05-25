@@ -1,6 +1,6 @@
 (function (angular) {
     'use strict';
-    angular.module('FileManagerApp', []).controller('FileManagerCtrl', [
+    angular.module('FileManagerApp').controller('FileManagerCtrl', [
         '$scope', '$rootScope', '$window', '$translate', 'fileManagerConfig', 'item', 'fileNavigator', 'apiMiddleware',
         function ($scope, $rootScope, $window, $translate, fileManagerConfig, Item, FileNavigator, ApiMiddleware) {
 

@@ -1,6 +1,6 @@
 (function (angular) {
     'use strict';
-    angular.module('FileManagerApp', []).service('fileNavigator', [
+    angular.module('FileManagerApp').service('fileNavigator', [
         'apiMiddleware', 'fileManagerConfig', 'item',
         function (ApiMiddleware, fileManagerConfig, Item) {
 

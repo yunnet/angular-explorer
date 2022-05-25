@@ -1,6 +1,6 @@
 (function (angular) {
     'use strict';
-    angular.module('FileManagerApp', []).factory('item', ['fileManagerConfig', 'chmod', function (fileManagerConfig, Chmod) {
+    angular.module('FileManagerApp').factory('item', ['fileManagerConfig', 'chmod', function (fileManagerConfig, Chmod) {
 
         var Item = function (model, path) {
             var rawModel = {

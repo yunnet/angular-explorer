@@ -1,6 +1,6 @@
 (function (angular) {
     'use strict';
-    angular.module('FileManagerApp', []).service('chmod', function () {
+    angular.module('FileManagerApp').service('chmod', function () {
 
         var Chmod = function (initValue) {
             this.owner = this.getRwxObj();

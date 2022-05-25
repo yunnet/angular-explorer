@@ -1,6 +1,6 @@
 (function (angular) {
     'use strict';
-    var app = angular.module('FileManagerApp', []);
+    var app = angular.module('FileManagerApp');
 
     app.filter('strLimit', ['$filter', function ($filter) {
         return function (input, limit, more) {

@@ -1,6 +1,6 @@
 (function (angular) {
     'use strict';
-    angular.module('FileManagerApp', []).provider('fileManagerConfig', function () {
+    angular.module('FileManagerApp').provider('fileManagerConfig', function () {
 
         var values = {
             appName: 'angular-filemanager v1.5',

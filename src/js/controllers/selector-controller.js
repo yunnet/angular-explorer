@@ -1,6 +1,6 @@
 (function (angular) {
     'use strict';
-    angular.module('FileManagerApp', []).controller('ModalFileManagerCtrl',
+    angular.module('FileManagerApp').controller('ModalFileManagerCtrl',
         ['$scope', '$rootScope', 'fileNavigator', function ($scope, $rootScope, FileNavigator) {
 
             $scope.reverse = false;
