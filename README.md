@@ -1,8 +1,3 @@
-## Update Dec 2018
-Hi!, I am moving the project from AngularJS to **React + Redux** [(react-filemanager)](https://github.com/joni2back/react-filemanager), it's very important for me your collaboration on my development tasks and time. Please help me to move forward with a donation by paypal :) [![Donate](https://www.paypal.com/en_GB/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=XRB7EW72PS982) 
-
----
-
 # angular-filemanager
 
 A very smart filemanager to manage your files in the browser developed in AngularJS following Material Design styles by [Jonas Sciangula Street](https://github.com/joni2back)
@@ -91,7 +86,7 @@ angular.module('FileManagerApp').config(['fileManagerConfigProvider', function (
 
 ### Create a new build with your changes
 ```sh
-  gulp build || node node_modules/gulp/bin/gulp.js build
+  gulp
 ```
 
 You can do many things by extending the configuration. Like hide the sidebar or the search button. See [the list of default configurations](/src/js/providers/config.js).
@@ -100,7 +95,7 @@ You can do many things by extending the configuration. Like hide the sidebar or 
 
 ### Contribute
 To contribute to the project you can simply fork this repo. To build a minified version, you can simply run the Gulp
-task `gulp build`. The minified/uglified files are created in the `dist` folder.
+task `gulp`. The minified/uglified files are created in the `dist` folder.
 
 ### Versioning
 For transparency into our release cycle and in striving to maintain backward compatibility, angular-filemanager is maintained under [the Semantic Versioning guidelines](http://semver.org/).
