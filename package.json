@@ -1,6 +1,6 @@
 {
-  "name": "angular-filemanager",
-  "version": "1.5.1",
+  "name": "angular-explorer",
+  "version": "1.5.3",
   "description": "A very smart filemanager to manage your files in the browser.",
   "main": "src/app.js",
   "scripts": {
@@ -8,17 +8,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joni2back/angular-filemanager.git"
+    "url": "git+https://github.com/yunnet/angular-explorer.git"
   },
   "keywords": [
-    "filemanager"
+    "explorer"
   ],
   "author": "Jonas Sciangula Street",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/joni2back/angular-filemanager/issues"
+    "url": "https://github.com/yunnet/angular-explorer/issues"
   },
-  "homepage": "https://github.com/joni2back/angular-filemanager#readme",
+  "homepage": "https://github.com/yunnet/angular-explorer#readme",
   "devDependencies": {
     "angular-translate": "~2.15.1",
     "bootstrap": "~3.3.2",

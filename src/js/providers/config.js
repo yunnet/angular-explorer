@@ -3,24 +3,24 @@
     angular.module('FileManagerApp').provider('fileManagerConfig', function () {
 
         var values = {
-            appName: 'angular-filemanager v1.5',
+            appName: 'angular-explorer v1.5.3',
             defaultLang: 'en',
             multiLang: true,
 
-            listUrl: 'bridges/php/handler.php',
-            uploadUrl: 'bridges/php/handler.php',
-            renameUrl: 'bridges/php/handler.php',
-            copyUrl: 'bridges/php/handler.php',
-            moveUrl: 'bridges/php/handler.php',
-            removeUrl: 'bridges/php/handler.php',
-            editUrl: 'bridges/php/handler.php',
-            getContentUrl: 'bridges/php/handler.php',
-            createFolderUrl: 'bridges/php/handler.php',
-            downloadFileUrl: 'bridges/php/handler.php',
-            downloadMultipleUrl: 'bridges/php/handler.php',
-            compressUrl: 'bridges/php/handler.php',
-            extractUrl: 'bridges/php/handler.php',
-            permissionsUrl: 'bridges/php/handler.php',
+            listUrl: 'api/handler',
+            renameUrl: 'api/handler',
+            copyUrl: 'api/handler',
+            moveUrl: 'api/handler',
+            removeUrl: 'api/handler',
+            editUrl: 'api/handler',
+            getContentUrl: 'api/handler',
+            createFolderUrl: 'api/handler',
+            uploadUrl: 'api/upload',
+            downloadFileUrl: 'api/download',
+            downloadMultipleUrl: 'api/download',
+            compressUrl: 'api/handler',
+            extractUrl: 'api/handler',
+            permissionsUrl: 'api/handler',
             basePath: '/',
 
             searchForm: true,
@@ -45,7 +45,7 @@
                 pickFolders: false
             },
 
-            multipleDownloadFileName: 'angular-filemanager.zip',
+            multipleDownloadFileName: 'angular-explorer.zip',
             filterFileExtensions: [],
             showExtensionIcons: true,
             showSizeForDirectories: false,

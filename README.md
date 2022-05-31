@@ -49,14 +49,14 @@ This project provides a web file manager interface, **allowing you to create you
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="node_modules/bootswatch/paper/bootstrap.min.css" />
 
-<!-- angular-filemanager -->
-  <link rel="stylesheet" href="dist/angular-filemanager.min.css">
-  <script src="dist/angular-filemanager.min.js"></script>
+<!-- angular-explorer -->
+  <link rel="stylesheet" href="dist/angular-explorer.min.css">
+  <script src="dist/angular-explorer.min.js"></script>
 ```
 
 **3) Use the angular directive in your HTML**
 ```html
-<angular-filemanager></angular-filemanager>
+<angular-explorer></angular-explorer>
 ```
 
 ---------
@@ -67,7 +67,7 @@ This project provides a web file manager interface, **allowing you to create you
 angular.module('FileManagerApp').config(['fileManagerConfigProvider', function (config) {
   var defaults = config.$get();
   config.set({
-    appName: 'angular-filemanager',
+    appName: 'angular-explorer',
     pickCallback: function(item) {
       var msg = 'Picked %s "%s" for external use'
         .replace('%s', item.type)
@@ -98,7 +98,7 @@ To contribute to the project you can simply fork this repo. To build a minified 
 task `gulp`. The minified/uglified files are created in the `dist` folder.
 
 ### Versioning
-For transparency into our release cycle and in striving to maintain backward compatibility, angular-filemanager is maintained under [the Semantic Versioning guidelines](http://semver.org/).
+For transparency into our release cycle and in striving to maintain backward compatibility, angular-explorer is maintained under [the Semantic Versioning guidelines](http://semver.org/).
 
 ### Copyright and license
 Code and documentation released under [the MIT license](https://github.com/joni2back/angular-filemanager/blob/master/LICENSE).
