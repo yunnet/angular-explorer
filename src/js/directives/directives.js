@@ -2,7 +2,7 @@
     'use strict';
     var app = angular.module('FileManagerApp');
 
-    app.directive('angularFilemanager', ['$parse', 'fileManagerConfig', function ($parse, fileManagerConfig) {
+    app.directive('angularExplorer', ['$parse', 'fileManagerConfig', function ($parse, fileManagerConfig) {
         return {
             restrict: 'EA',
             templateUrl: fileManagerConfig.tplPath + '/main.html'

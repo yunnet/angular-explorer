@@ -5,7 +5,7 @@
 
   100% {
     opacity: 1;
-  };
+  }
 }
 
 @keyframes fadeIn {
@@ -15,7 +15,7 @@
 
   100% {
     opacity: 1;
-  };
+  }
 }
 
 @-webkit-keyframes fadeInDown {
@@ -29,7 +29,7 @@
     opacity: 1;
     -webkit-transform: none;
     transform: none;
-  };
+  }
 }
 
 @keyframes fadeInDown {
@@ -43,19 +43,19 @@
     opacity: 1;
     -webkit-transform: none;
     transform: none;
-  };
+  }
 }
 
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
-  };
+  }
 }
 
 @-webkit-keyframes rotate {
   100% {
     -webkit-transform: rotate(360deg);
-  };
+  }
 }
 
 @keyframes colors {
@@ -77,44 +77,44 @@
 
   100% {
     stroke: #4285F4;
-  };
+  }
 }
 
 @keyframes dash {
   0% {
-    stroke-dasharray: 1,150;
+    stroke-dasharray: 1, 150;
     stroke-dashoffset: 0;
     stroke: red;
   }
 
   50% {
-    stroke-dasharray: 90,150;
+    stroke-dasharray: 90, 150;
     stroke-dashoffset: -35;
     stroke: yellow;
   }
 
   100% {
-    stroke-dasharray: 90,150;
+    stroke-dasharray: 90, 150;
     stroke-dashoffset: -124;
     stroke: green;
-  };
+  }
 }
 
 @-webkit-keyframes dash {
   0% {
-    stroke-dasharray: 1,150;
+    stroke-dasharray: 1, 150;
     stroke-dashoffset: 0;
   }
 
   50% {
-    stroke-dasharray: 90,150;
+    stroke-dasharray: 90, 150;
     stroke-dashoffset: -35;
   }
 
   100% {
-    stroke-dasharray: 90,150;
+    stroke-dasharray: 90, 150;
     stroke-dashoffset: -124;
-  };
+  }
 }
 
 .animated {
@@ -154,7 +154,7 @@
 }
 
 .spinner-container .path {
-  stroke-dasharray: 1,150;
+  stroke-dasharray: 1, 150;
   stroke-dashoffset: 0;
   stroke: #2196F3;
   stroke-linecap: round;
